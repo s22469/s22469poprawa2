@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "YLw47EPp6wn7Ljn1saoY7g1OD5u0oLvySSnk2A3EucHUGhNgHN4MiqGtBba843bdwaD7vdL9gvyhRc1BCkf0hg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wafli\\source\\repos\\s22469poprawa2\\s22469poprawa2\\s22469poprawa2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wafli\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\wafli\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\wafli\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\wafli\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\wafli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\wafli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

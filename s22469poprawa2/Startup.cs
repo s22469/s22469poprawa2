@@ -2,11 +2,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using s22469poprawa2.Models;
+using s22469poprawa2.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +29,16 @@ namespace s22469poprawa2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
+            services.AddScoped<DbService>();
+            services.AddDbContext<ExampleDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.AddControllers().AddJsonOptions(conf =>
+            {
+                conf.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+            });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "s22469poprawa2", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "zespoly", Version = "v1" });
+                c.ResolveConflictingActions(x => x.First());
             });
         }
 
